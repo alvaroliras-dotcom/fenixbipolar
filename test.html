@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/marca/YOELFENIX.png">
+<title>Test de trastorno bipolar (doble) — fénixbipolar.es</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Dos tests orientativos sobre el trastorno bipolar: uno para ti y otro para quien acompaña. No es un diagnóstico; te ayuda a saber si conviene dar el paso de consultar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bone:#FBF7F1;--bone-2:#F4ECE2;--ink:#211E26;--ink-soft:#5A535F;--ember:#E2603F;--ember-deep:#C44A2E;--gold:#E8A23A;--trust:#2E6E68;--trust-soft:#E4EEEC;--line:#E7DCCE;--radius:16px;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bone);line-height:1.65}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;line-height:1.14;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px}
+.btn{display:inline-block;background:var(--ember);color:#fff;padding:15px 30px;border-radius:999px;font-weight:600;font-size:16px;border:none;cursor:pointer;transition:.2s;font-family:inherit}
+.btn:hover{background:var(--ember-deep)}
+.btn:disabled{background:#d9cdbf;cursor:not-allowed}
+.btn.ghost{background:transparent;color:var(--ink-soft);border:1.5px solid var(--line);padding:9px 18px;font-size:14px}
+.btn.ghost:hover{border-color:var(--ember);color:var(--ember)}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ember)}
+header{position:sticky;top:0;z-index:50;background:rgba(251,247,241,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1140px;margin:0 auto;padding:0 24px}
+.logo{display:flex;align-items:center;gap:11px;font-family:'Fraunces',serif;font-size:21px;font-weight:600}
+.logo b{color:var(--ember)}.mark{width:32px;height:32px}
+.menu{display:flex;gap:26px;font-size:15px;font-weight:500}.menu a{color:var(--ink-soft)}
+@media(max-width:760px){.menu{display:none}}
+.note{background:#fff4ec;border:1px dashed var(--ember);color:#8a3c25;font-size:13px;text-align:center;padding:10px;border-radius:8px;margin:14px auto 0;max-width:780px}
+.head{padding:50px 0 6px;text-align:center}
+.head h1{font-size:clamp(31px,5vw,44px);margin-bottom:8px}
+.head .badge{display:inline-block;background:var(--trust-soft);color:var(--trust);border:1px solid #cfe3df;border-radius:999px;padding:5px 14px;font-size:12.5px;font-weight:600;margin-top:8px}
+.disclaimer{background:var(--trust-soft);border:1px solid #cfe3df;border-left:5px solid var(--trust);border-radius:12px;padding:18px 20px;margin:24px 0}
+.disclaimer b{color:var(--trust)}
+.disclaimer .t{display:flex;gap:12px;align-items:flex-start}.disclaimer svg{flex:0 0 auto;margin-top:2px}
+.warn{background:#fff4ec;border:1px solid #f3d8c9;border-left:5px solid var(--ember);border-radius:12px;padding:18px 20px;margin:20px 0;color:#8a3c25}
+.warn b{color:var(--ember-deep)}.warn .t{display:flex;gap:12px;align-items:flex-start}.warn svg{flex:0 0 auto;margin-top:2px}
+/* chooser */
+.chooser{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 6px}
+.door{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;cursor:pointer;transition:.2s;text-align:left}
+.door:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(33,30,38,.08)}
+.door.self{border-top:4px solid var(--ember)}.door.fam{border-top:4px solid var(--trust)}
+.door h3{font-size:21px;margin-bottom:6px}.door p{color:var(--ink-soft);font-size:15px}
+.door .lk{color:var(--ember);font-weight:600;font-size:14px;margin-top:14px;display:inline-block}
+.door.fam .lk{color:var(--trust)}
+@media(max-width:640px){.chooser{grid-template-columns:1fr}}
+.panel{display:none}
+.back{margin:14px 0 4px}
+.section h2{font-size:23px;margin-bottom:8px}.section p{color:var(--ink-soft);margin-bottom:6px}
+.prov{font-size:12.5px;color:var(--ember);background:#fff4ec;border-radius:6px;padding:6px 10px;display:inline-block;margin:14px 0}
+.q{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:12px}
+.q .qn{font-size:12px;color:var(--ember);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.q.fam .qn{color:var(--trust)}
+.q h3{font-family:'Inter';font-weight:600;font-size:17px;margin:6px 0 14px;letter-spacing:0}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{border:1.5px solid var(--line);background:var(--bone);border-radius:999px;padding:9px 16px;font-size:14px;cursor:pointer;transition:.15s;font-family:inherit;color:var(--ink)}
+.opt:hover{border-color:var(--ember)}.opt.sel{background:var(--ember);color:#fff;border-color:var(--ember)}
+.q.fam .opt.sel{background:var(--trust);border-color:var(--trust)}
+.actions{text-align:center;margin:24px 0 8px}
+.result{display:none;background:#fff;border:1px solid var(--line);border-top:5px solid var(--ember);border-radius:14px;padding:26px;margin:18px 0}
+.result h2{font-size:23px;margin-bottom:12px}.result p{color:var(--ink-soft);margin-bottom:12px}
+footer{background:var(--ink);color:#b8b1bf;padding:40px 0 26px;font-size:14px;margin-top:40px}
+.help{background:#2b2732;border:1px solid #3a3543;border-radius:12px;padding:16px;color:#d7d1de;font-size:13.5px;line-height:1.55;max-width:780px;margin:0 auto}.help b{color:#fff}
+.fbot{max-width:780px;margin:18px auto 0;text-align:center;color:#857e8d;font-size:13px}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px;color:var(--ink)}
+@media(max-width:760px){.burger{display:inline-flex}.menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bone);border-bottom:1px solid var(--line);padding:6px 24px 14px}.menu.open{display:flex}.menu a{padding:13px 0;border-bottom:1px solid var(--line);font-size:16px}header .nav,header .wrap.nav{position:relative}}
+</style>
+</head>
+<body>
+
+<div class="note">Maqueta de concepto · Preguntas de ejemplo <b>provisionales</b>; la escala real y su puntuación las elige y firma el Dr. Rafael. Logo provisional.</div>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="index.html"><img class="mark" src="assets/marca/YOELFENIX.png" alt="fénixbipolar"><span><b>fénix</b>bipolar</span></a>
+    <button class="burger" aria-label="Abrir menú" onclick="document.querySelector('.menu').classList.toggle('open')"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><nav class="menu"><a href="trastorno-bipolar-que-es.html">El trastorno</a><a href="convivir-con-una-persona-bipolar.html">Convivir / Vivir</a><a href="test.html">Test</a><a href="recursos-ayuda-trastorno-bipolar.html">Recursos</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="head">
+    <span class="eyebrow">Herramienta orientativa</span>
+    <h1>Test de trastorno bipolar</h1>
+    <div class="badge">⚠ Es orientativo · no es un diagnóstico</div>
+  </div>
+
+  <div class="disclaimer">
+    <div class="t">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#2E6E68" stroke-width="1.8"/><path d="M12 7v6" stroke="#2E6E68" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16.5" r="1.2" fill="#2E6E68"/></svg>
+      <div>Sea cual sea el resultado, <b>esto es solo orientativo</b>. No diagnostica nada. El trastorno bipolar únicamente lo confirma un profesional de la salud mental. Esta herramienta sirve para ordenar lo que ves y ayudarte a decidir si conviene consultar.</div>
+    </div>
+  </div>
+
+  <!-- CHOOSER -->
+  <div id="chooser">
+    <p style="text-align:center;color:var(--ink-soft);margin-bottom:8px">¿Para quién es?</p>
+    <div class="chooser">
+      <div class="door self" onclick="show('self')">
+        <h3>Es para mí</h3>
+        <p>Crees que tú podrías estar viviendo algo así y quieres ordenarlo.</p>
+        <span class="lk">Empezar mi test →</span>
+      </div>
+      <div class="door fam" onclick="show('fam')">
+        <h3>Es para alguien cercano</h3>
+        <p>Te preocupa una pareja, un hijo, un familiar, y no sabes qué le pasa.</p>
+        <span class="lk">Empezar el test →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL SELF -->
+  <div class="panel" id="panel-self">
+    <div class="back"><button class="btn ghost" onclick="reset()">← Cambiar</button></div>
+    <div class="section"><h2>¿Podría tener yo trastorno bipolar?</h2>
+      <p>Responde con calma, pensando en cómo has estado de verdad. No hay respuestas buenas ni malas.</p>
+      <span class="prov">Preguntas de ejemplo · provisional</span></div>
+    <div id="quiz-self"></div>
+    <div class="actions"><button class="btn" id="go-self" disabled>Ver mi resultado orientativo</button></div>
+    <div class="result" id="res-self"><h2 id="rt-self"></h2><p id="rx-self"></p><div><a class="btn" href="diagnostico-trastorno-bipolar.html">Cómo se diagnostica →</a></div></div>
+  </div>
+
+  <!-- PANEL FAMILY -->
+  <div class="panel" id="panel-fam">
+    <div class="back"><button class="btn ghost" onclick="reset()">← Cambiar</button></div>
+    <div class="warn">
+      <div class="t">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 16H3L12 3z" stroke="#C44A2E" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 10v4" stroke="#C44A2E" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16.7" r="1.1" fill="#C44A2E"/></svg>
+        <div>Antes de empezar: esto <b>no sirve para etiquetar a nadie</b>. Aunque salgan muchas señales, no podrás decir "es bipolar". Lo que te dará es una orientación para, con tacto, ayudarle a buscar a un profesional. No se lo sueltes como una acusación.</div>
+      </div>
+    </div>
+    <div class="section"><h2>¿Podría tenerlo alguien cercano?</h2>
+      <p>Responde pensando en lo que has <b>observado</b> en esa persona, sin juzgar.</p>
+      <span class="prov">Preguntas de ejemplo · provisional</span></div>
+    <div id="quiz-fam"></div>
+    <div class="actions"><button class="btn" id="go-fam" disabled>Ver el resultado orientativo</button></div>
+    <div class="result" id="res-fam" style="border-top-color:var(--trust)"><h2 id="rt-fam"></h2><p id="rx-fam"></p><div><a class="btn" href="convivir-con-una-persona-bipolar.html">Cómo ayudarle a dar el paso →</a></div></div>
+  </div>
+
+  <div class="warn" style="margin-top:30px">
+    <div class="t">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-7-10a4 4 0 017-2.65A4 4 0 0119 11c0 5.65-7 10-7 10z" stroke="#C44A2E" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <div>Si al responder esto te has removido o lo estás pasando mal, no te quedes solo: <b>Línea 024</b> (24 h, gratuita y confidencial). En urgencia, <b>112</b>.</div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="help"><b>¿Estás pasando un momento difícil?</b><br>En España tienes la <b>Línea 024</b> de atención a la conducta suicida: gratuita, confidencial y 24 h. En urgencia, <b>112</b>. No estás solo.</div>
+  <div style="text-align:center;margin:24px 0 6px"><img src="assets/marca/INFINITO-INTERROGACION-blanco.png" alt="" width="72" style="height:auto;opacity:.5"></div>
+<div class="fbot">© 2026 fénixbipolar.es — Una producción de El Gordo y el Flaco.</div>
+</footer>
+
+<script>
+const opciones=[["Nunca",0],["Alguna vez",1],["A menudo",2],["Muchas veces",3]];
+const SELF=[
+ "¿Has tenido temporadas con muchísima energía y muy poca necesidad de dormir?",
+ "¿Has pasado por épocas de tristeza profunda o vacío que duraban días o semanas?",
+ "¿Tu ánimo cambia entre rachas muy 'arriba' y muy 'abajo', a veces sin motivo claro?",
+ "En las épocas 'arriba', ¿has tomado decisiones impulsivas (gastos, riesgos) impropias de ti?",
+ "¿Esos cambios han afectado a tu trabajo, tus estudios o tus relaciones?",
+ "¿Alguien cercano te ha dicho que te notaba 'acelerado' o 'apagado' sin causa clara?"
+];
+const FAM=[
+ "¿Has notado en esa persona temporadas con muchísima energía y muy poco sueño?",
+ "¿La has visto en épocas de tristeza profunda o desconexión que duraban días o semanas?",
+ "¿Su ánimo salta entre rachas muy 'arriba' y muy 'abajo', a veces sin motivo claro?",
+ "En las épocas 'arriba', ¿ha tomado decisiones impulsivas (gastos, riesgos) impropias de ella?",
+ "¿Esos cambios han afectado a su trabajo, sus estudios o sus relaciones?",
+ "¿Otras personas de su entorno también lo han notado?"
+];
+function build(qs,cont,btn,kind){
+  const ans=Array(qs.length).fill(null);
+  qs.forEach((p,i)=>{
+    const d=document.createElement('div'); d.className='q'+(kind==='fam'?' fam':'');
+    d.innerHTML=`<div class="qn">Pregunta ${i+1} de ${qs.length}</div><h3>${p}</h3>`;
+    const o=document.createElement('div'); o.className='opts';
+    opciones.forEach(([t,v])=>{const b=document.createElement('button');b.className='opt';b.textContent=t;
+      b.onclick=()=>{ans[i]=v;[...o.children].forEach(c=>c.classList.remove('sel'));b.classList.add('sel');document.getElementById(btn).disabled=ans.includes(null);};
+      o.appendChild(b);});
+    d.appendChild(o); cont.appendChild(d);
+  });
+  return ans;
+}
+const aSelf=build(SELF,document.getElementById('quiz-self'),'go-self','self');
+const aFam=build(FAM,document.getElementById('quiz-fam'),'go-fam','fam');
+function show(k){document.getElementById('chooser').style.display='none';document.getElementById('panel-'+k).style.display='block';window.scrollTo({top:0,behavior:'smooth'});}
+function reset(){document.querySelectorAll('.panel').forEach(p=>p.style.display='none');document.getElementById('chooser').style.display='block';window.scrollTo({top:0,behavior:'smooth'});}
+
+document.getElementById('go-self').onclick=()=>{
+  const s=aSelf.reduce((a,b)=>a+b,0), m=SELF.length*3;
+  const t=document.getElementById('rt-self'), x=document.getElementById('rx-self');
+  if(s>=m*0.4){t.textContent="Conviene que lo comentes con un profesional";x.innerHTML="Tus respuestas señalan cosas que merece la pena revisar. <b>Esto no significa que tengas trastorno bipolar</b> — es orientativo. Lleva tus respuestas a la consulta: a un profesional le serán útiles.";}
+  else{t.textContent="Pocas señales por ahora";x.innerHTML="Tus respuestas no apuntan a muchas señales, pero <b>esto no lo descarta</b>. Si algo te preocupa o no te encuentras bien, consúltalo igual. Tú te conoces.";}
+  document.getElementById('res-self').style.display='block';document.getElementById('res-self').scrollIntoView({behavior:'smooth'});
+};
+document.getElementById('go-fam').onclick=()=>{
+  const s=aFam.reduce((a,b)=>a+b,0), m=FAM.length*3;
+  const t=document.getElementById('rt-fam'), x=document.getElementById('rx-fam');
+  if(s>=m*0.4){t.textContent="Hay señales que conviene tomar en serio";x.innerHTML="Lo que describes incluye cosas que merece la pena valorar. Pero ojo: <b>esto NO confirma que tu familiar tenga trastorno bipolar</b>, y no es para que se lo digas como un diagnóstico. Lo que te indica es que vale la pena buscar ayuda profesional y, con tacto y cariño, acercarle a que lo valore quien sabe.";}
+  else{t.textContent="Pocas señales por ahora";x.innerHTML="Lo que cuentas no apunta a muchas señales, pero <b>tú observas cosas que un test no capta</b>. Si tu preocupación sigue, lo mejor es comentarlo con un profesional.";}
+  document.getElementById('res-fam').style.display='block';document.getElementById('res-fam').scrollIntoView({behavior:'smooth'});
+};
+</script>
+</body>
+</html>
