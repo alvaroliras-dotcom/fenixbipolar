@@ -38,6 +38,7 @@ Vercel → proyecto → **Settings → Domains** → añade `fenixbipolar.es` y 
 - [ ] En `robots.txt`: borrar `Disallow: /` y dejar `Allow: /`.
 - [ ] Quitar de los pies "Maqueta de concepto (noindex…)".
 - [ ] Conectar el botón **"Quiero recibirlo"** (newsletter) a un servicio real (ahora apunta a `#`).
+- [ ] Activar el **formulario de Contacto** (FormSubmit): hacer un primer envío y confirmar el correo de activación. Revisar/cambiar el email destino (ahora `alvaroliras@gmail.com`, visible en el código fuente).
 - [ ] Confirmar `BASE` correcta en `sitemap.xml` y `robots.txt`.
 - [ ] Subir el `sitemap.xml` a Google Search Console.
 - [ ] (Opcional) Colocar la foto del Dr. (`assets/img/01-dr-rafael.webp`) en "Sobre el portal".
