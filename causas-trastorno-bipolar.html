@@ -20,7 +20,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,247,241,.92);backdro
 .logo b{color:var(--ember)}.mark{width:30px;height:30px}
 .menu{display:flex;gap:24px;font-size:15px;font-weight:500}.menu a{color:var(--ink-soft)}.menu a:hover{color:var(--ink);text-decoration:none}
 @media(max-width:760px){.menu{display:none}}
-.hero{position:relative;height:340px;overflow:hidden}
+.hero{position:relative;height:380px;overflow:hidden}
 .hero img{width:100%;height:100%;object-fit:cover}
 .hero .ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,18,24,.78),rgba(20,18,24,.15));display:flex;align-items:flex-end}
 .hero .ov .col{padding-bottom:30px}
@@ -52,8 +52,36 @@ footer{background:var(--ink);color:#b8b1bf;padding:40px 0 26px;font-size:14px}
 .fbot{color:#857e8d;font-size:13px;border-top:1px solid #34303b;padding-top:16px;margin-top:14px}
 .burger{display:none;background:none;border:0;cursor:pointer;padding:8px;color:var(--ink)}
 @media(max-width:760px){.burger{display:inline-flex}.menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bone);border-bottom:1px solid var(--line);padding:6px 24px 14px}.menu.open{display:flex}.menu a{padding:13px 0;border-bottom:1px solid var(--line);font-size:16px}header .nav,header .wrap.nav{position:relative}}
+
+/*FX*/
+body{background:linear-gradient(180deg,#FCF3E6 0,var(--bone) 540px) no-repeat var(--bone)}
+.btn{transition:background .2s ease,transform .15s ease,box-shadow .25s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(226,96,63,.30)}
+.btn:active{transform:translateY(0);box-shadow:none}
+.menu a{position:relative}
+.menu a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--ember);transform:scaleX(0);transform-origin:left;transition:transform .28s ease}
+.menu a:hover::after{transform:scaleX(1)}
+header{transition:box-shadow .3s ease}
+header.scrolled{box-shadow:0 8px 28px rgba(33,30,38,.08)}
+a.card,a.tile{transition:transform .28s cubic-bezier(.22,.61,.36,1),box-shadow .28s ease,border-color .2s ease}
+a.card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(33,30,38,.12)}
+a.tile:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(33,30,38,.10);border-color:var(--ember)}
+.hero{overflow:hidden}
+.hero img{position:absolute;left:0;top:-15%;width:100%;height:130%;object-fit:cover;object-position:center 30%;will-change:transform}
+.hero .ov{z-index:2}
+@media(prefers-reduced-motion:no-preference){
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .75s cubic-bezier(.22,.61,.36,1)}
+.reveal.in{opacity:1;transform:none}
+.hero .eyebrow,.hero h1{opacity:0;animation:fxHero .9s cubic-bezier(.22,.61,.36,1) forwards}
+.hero h1{animation-delay:.12s}
+@keyframes fxHero{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.sigwipe{clip-path:inset(0 100% 0 0)}
+.sigwipe.in{clip-path:inset(0 0 0 0);transition:clip-path 1.2s ease}
+}
+/*NAV*/
+.menu a.navblog{background:var(--ember);color:#fff;padding:8px 18px;border-radius:999px;font-weight:600}.menu a.navblog:hover{background:var(--ember-deep);color:#fff;text-decoration:none}.menu a.navblog::after{display:none}@media(max-width:760px){.menu a.navblog{display:inline-block;margin:12px 0 4px;border-bottom:0;padding:10px 22px}}
 </style></head><body><header><div class="wrap nav"><a class="logo" href="index.html"><img class="mark" src="assets/marca/YOELFENIX.png" alt="fénixbipolar"><span><b>fénix</b>bipolar</span></a>
-<button class="burger" aria-label="Abrir menú" onclick="document.querySelector('.menu').classList.toggle('open')"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><nav class="menu"><a href="trastorno-bipolar-que-es.html">El trastorno</a><a href="convivir-con-una-persona-bipolar.html">Convivir</a><a href="vivir-con-trastorno-bipolar.html">Vivir con</a><a href="test.html">Test</a><a href="recursos-ayuda-trastorno-bipolar.html">Recursos</a></nav></div></header><section class="hero"><img src="assets/img/13-causas.webp" alt="Causas del trastorno bipolar"><div class="ov"><div class="col"><span class="eyebrow">Trastorno bipolar</span><h1>Causas del trastorno bipolar</h1></div></div></section><div class="trust"><div class="col"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" stroke="#2E6E68" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#2E6E68" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Contenido revisado por el <b>Dr. Rafael Fernández García-Andrade</b> · Psiquiatra · H. Clínico San Carlos · UCM</span></div></div><article class="article"><div class="col"><p>Si has llegado aquí buscando culpa —la tuya o la de tu familia—, podemos ahorrarte el viaje: no la hay.</p>
+<button class="burger" aria-label="Abrir menú" onclick="document.querySelector('.menu').classList.toggle('open')"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><nav class="menu"><a href="trastorno-bipolar-que-es.html">El trastorno</a><a href="convivir-con-una-persona-bipolar.html">Convivir</a><a href="vivir-con-trastorno-bipolar.html">Vivir con</a><a href="test.html">Test</a><a href="recursos-ayuda-trastorno-bipolar.html">Recursos</a><a class="navblog" href="blog.html">Blog</a></nav></div></header><section class="hero"><img src="assets/img/13-causas.webp" alt="Causas del trastorno bipolar"><div class="ov"><div class="col"><span class="eyebrow">Trastorno bipolar</span><h1>Causas del trastorno bipolar</h1></div></div></section><div class="trust"><div class="col"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" stroke="#2E6E68" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#2E6E68" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Contenido revisado por el <b>Dr. Rafael Fernández García-Andrade</b> · Psiquiatra · H. Clínico San Carlos · UCM</span></div></div><article class="article"><div class="col"><p>Si has llegado aquí buscando culpa —la tuya o la de tu familia—, podemos ahorrarte el viaje: no la hay.</p>
 <p>El trastorno bipolar no aparece por algo que hiciste mal, ni por cómo te criaron, ni por un drama familiar. Su origen está en otro sitio. Te lo explicamos.</p>
 <h2>Es una enfermedad biológica del cerebro</h2>
 <p>El trastorno bipolar es, en su raíz, físico. Tiene que ver con cómo funcionan ciertos <strong>neurotransmisores y circuitos del cerebro</strong>, los sistemas que regulan el estado de ánimo, la energía y el sueño. Cuando ese mecanismo está alterado, el ánimo oscila de un modo que la persona no elige.</p>
@@ -83,4 +111,22 @@ footer{background:var(--ink);color:#b8b1bf;padding:40px 0 26px;font-size:14px}
 <p><strong>CTA:</strong> Entiende el trastorno bipolar de raíz, sin culpas. Suscríbete y recíbelo paso a paso. → <em>[Suscribirme]</em></p></div></article><div class="ad"><div class="ad-slot"><span class="ad-tag">Publicidad</span><h4>Tríptico Bipolar — el trastorno bipolar contado desde dentro</h4><p>Tres novelas en primera persona. Cada una se lee sola; juntas, son lo más cerca que estarás de una mente bipolar sin vivirla.</p><a href="https://www.tripticobipolar.es" target="_blank" rel="nofollow sponsored noopener">Descúbrelas en tripticobipolar.es →</a></div></div><section class="news"><h2>No te lleves esto solo a casa.</h2><p>Una vez por semana, algo útil y con cabeza sobre el trastorno bipolar.</p><a class="btn" href="#">Quiero recibirlo</a></section><footer><div class="wrap"><div class="help"><b>¿Estás pasando un momento difícil?</b><br>En España tienes la <b>Línea 024</b> de atención a la conducta suicida: gratuita, confidencial y 24 h. En urgencia, <b>112</b>. No estás solo.</div>
 <div class="fnav"><a href="trastorno-bipolar-que-es.html">Qué es</a><a href="sintomas-trastorno-bipolar.html">Síntomas</a><a href="tratamiento-trastorno-bipolar.html">Tratamiento</a><a href="convivir-con-una-persona-bipolar.html">Convivir</a><a href="vivir-con-trastorno-bipolar.html">Vivir con</a><a href="test.html">Test</a><a href="recursos-ayuda-trastorno-bipolar.html">Recursos</a><a href="sobre-el-portal.html">Sobre el portal</a></div>
 <div style="text-align:center;margin:24px 0 6px"><img src="assets/marca/INFINITO-INTERROGACION-blanco.png" alt="" width="72" style="height:auto;opacity:.5"></div>
-<div class="fbot">© 2026 fénixbipolar.es — Una producción de El Gordo y el Flaco. · Maqueta de concepto (noindex hasta el aval del Dr.).</div></div></footer></body></html>
+<div class="fbot">© 2026 fénixbipolar.es — Una producción de El Gordo y el Flaco. · Maqueta de concepto (noindex hasta el aval del Dr.).</div></div></footer><script>/*FX*/(function(){
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var h=document.querySelector('header');
+addEventListener('scroll',function(){if(h)h.classList.toggle('scrolled',scrollY>8)},{passive:true});
+if(!reduce){
+ var heroes=[].slice.call(document.querySelectorAll('.hero'));
+ var ticking=false;
+ function par(){heroes.forEach(function(s){var img=s.querySelector('img');if(!img)return;var r=s.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;var p=(r.top+r.height/2-innerHeight/2)/innerHeight;img.style.transform='translate3d(0,'+(p*-46).toFixed(1)+'px,0)';});ticking=false;}
+ function onScroll(){if(!ticking){requestAnimationFrame(par);ticking=true;}}
+ addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);par();
+}
+if(!reduce&&'IntersectionObserver'in window){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -7% 0px'});
+ [].slice.call(document.querySelectorAll('section:not(.hero), .trust, .ad, .article .col > *, footer .help')).forEach(function(el){el.classList.add('reveal');io.observe(el);});
+ var sig=document.querySelector('img[src*="INFINITO-INTERROGACION-blanco"]');
+ if(sig){sig.classList.add('sigwipe');var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io2.unobserve(e.target);}});},{threshold:.4});io2.observe(sig);}
+}
+})();</script>
+</body></html>
