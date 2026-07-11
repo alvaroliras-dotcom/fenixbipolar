@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="assets/marca/YOELFENIX.png">
-<title>Quiénes somos — Las personas detrás de fénixbipolar.es</title><meta name="description" content="Quiénes están detrás de fénixbipolar.es: Álvaro Liras, que vive el trastorno bipolar en primera persona, y el Dr. Rafael Fernández García-Andrade, psiquiatra que revisa y avala el contenido de salud del portal."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>fénixbipolar.es — Trastorno bipolar, sin filtro y con rigor</title><meta name="description" content="Portal divulgativo de referencia sobre el trastorno bipolar. Contado desde dentro y revisado por psiquiatría. Para quien lo vive y para quien acompaña."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bone:#FBF7F1;--bone-2:#F4ECE2;--ink:#211E26;--ink-soft:#5A535F;--ember:#E2603F;--ember-deep:#C44A2E;--gold:#E8A23A;--trust:#2E6E68;--trust-soft:#E4EEEC;--line:#E7DCCE;--radius:16px;}
@@ -36,6 +36,12 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,247,241,.92);backdro
 .article blockquote strong{color:var(--trust)}
 .article hr{border:none;border-top:1px solid var(--line);margin:28px 0}
 .article em a,.article a{font-weight:500}
+.ad{max-width:760px;margin:36px auto;padding:0 24px}
+.ad-slot{position:relative;border:1px solid var(--line);border-radius:14px;background:#fff;padding:22px}
+.ad-tag{position:absolute;top:0;left:20px;transform:translateY(-50%);background:var(--ink-soft);color:#fff;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:4px;font-weight:600}
+.ad-slot h4{font-family:'Fraunces',serif;font-size:18px;font-weight:600;margin-bottom:4px}
+.ad-slot p{font-size:14px;color:var(--ink-soft);margin-bottom:12px}
+.ad-slot a{font-size:14px;font-weight:600}
 .news{background:var(--trust);color:#fff;text-align:center;padding:44px 24px;margin-top:36px}
 .news h2{color:#fff;font-size:26px}.news p{color:#d3e6e3;margin:10px auto 18px;max-width:34em}
 .news .btn{background:var(--gold);color:var(--ink)}
@@ -45,6 +51,7 @@ footer{background:var(--ink);color:#b8b1bf;padding:40px 0 26px;font-size:14px}
 .fbot{color:#857e8d;font-size:13px;border-top:1px solid #34303b;padding-top:16px;margin-top:14px}
 .burger{display:none;background:none;border:0;cursor:pointer;padding:8px;color:var(--ink)}
 @media(max-width:760px){.burger{display:inline-flex}.menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bone);border-bottom:1px solid var(--line);padding:6px 24px 14px}.menu.open{display:flex}.menu a{padding:13px 0;border-bottom:1px solid var(--line);font-size:16px}header .nav,header .wrap.nav{position:relative}}
+
 /*FX*/
 body{background:linear-gradient(180deg,#FCF3E6 0,var(--bone) 540px) no-repeat var(--bone)}
 .btn{transition:background .2s ease,transform .15s ease,box-shadow .25s ease}
@@ -55,6 +62,9 @@ body{background:linear-gradient(180deg,#FCF3E6 0,var(--bone) 540px) no-repeat va
 .menu a:hover::after{transform:scaleX(1)}
 header{transition:box-shadow .3s ease}
 header.scrolled{box-shadow:0 8px 28px rgba(33,30,38,.08)}
+a.card,a.tile{transition:transform .28s cubic-bezier(.22,.61,.36,1),box-shadow .28s ease,border-color .2s ease}
+a.card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(33,30,38,.12)}
+a.tile:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(33,30,38,.10);border-color:var(--ember)}
 .hero{overflow:hidden}
 .hero img{position:absolute;left:0;top:-15%;width:100%;height:130%;object-fit:cover;object-position:center 30%;will-change:transform}
 .hero .ov{z-index:2}
@@ -69,112 +79,84 @@ header.scrolled{box-shadow:0 8px 28px rgba(33,30,38,.08)}
 }
 /*NAV*/
 .menu a.navblog{background:var(--ember);color:#fff;padding:8px 18px;border-radius:999px;font-weight:600}.menu a.navblog:hover{background:var(--ember-deep);color:#fff;text-decoration:none}.menu a.navblog::after{display:none}@media(max-width:760px){.menu a.navblog{display:inline-block;margin:12px 0 4px;border-bottom:0;padding:10px 22px}}
+.bloghome{grid-template-columns:repeat(3,1fr)}@media(max-width:860px){.bloghome{grid-template-columns:1fr 1fr}}@media(max-width:560px){.bloghome{grid-template-columns:1fr}}
+@media(max-width:560px){.tribanner{grid-template-columns:1fr!important;text-align:center}.tribanner img{justify-self:center}.aval{grid-template-columns:1fr!important;text-align:center;justify-items:center}}
 /*NL*/.nlform{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;max-width:540px;margin:0 auto}.nlform input[type=email]{flex:1 1 240px;min-width:220px;padding:13px 16px;border:none;border-radius:999px;font-family:inherit;font-size:15px;color:var(--ink)}.nlform input[type=email]:focus{outline:2px solid var(--gold)}.nlform .btn{flex:0 0 auto;cursor:pointer}.nlconsent{flex:1 1 100%;color:#d3e6e3;font-size:12.5px;display:flex;gap:8px;align-items:flex-start;justify-content:center;margin-top:6px}.nlconsent input{width:auto;margin-top:2px}
-/*PERSONAS*/
-.person{display:grid;grid-template-columns:210px 1fr;gap:30px;align-items:start;margin:26px 0;padding:26px;background:#fff;border:1px solid var(--line);border-radius:18px}
-.person .ph{position:relative}
-.person img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center 25%;border-radius:14px;display:block}
-.person .badge{display:inline-block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:600;padding:5px 11px;border-radius:999px;margin-bottom:10px}
-.person .badge.viv{background:#fbe3db;color:var(--ember-deep)}
-.person .badge.med{background:var(--trust-soft);color:var(--trust)}
-.person h3{font-family:'Fraunces',serif;font-size:24px;font-weight:600;margin:0 0 2px;line-height:1.15}
-.person .role{color:var(--ink-soft);font-weight:600;font-size:14px;margin-bottom:14px}
-.person p{font-size:16px;margin:0 0 14px}
-.person .body{min-width:0}
-@media(max-width:620px){.person{grid-template-columns:1fr;gap:18px}.person img{max-width:210px}}
-</style>  <link rel="canonical" href="https://www.fenixbipolar.es/quienes-somos.html">
+/*TILES*/.topgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}@media(max-width:860px){.topgrid{grid-template-columns:1fr 1fr}}@media(max-width:520px){.topgrid{grid-template-columns:1fr}}.tile{display:flex;flex-direction:column}.tile .ti{display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;border-radius:11px;background:#fff;color:var(--ember);border:1px solid var(--line);margin-bottom:12px}.tile h3{font-family:Inter;font-weight:700;font-size:17px;margin:0 0 3px}.tile p{font-size:13px;color:var(--ink-soft);margin:0;line-height:1.45}
+/*HERO*/.hero-home{height:min(82vh,600px)}.hero-home .ov{background:linear-gradient(105deg,rgba(20,18,24,.84),rgba(20,18,24,.42) 52%,rgba(20,18,24,.08))}.hero-home .col{padding-bottom:48px}.hero-home h1{font-size:clamp(34px,5.4vw,58px);max-width:14em;margin:8px 0 0;letter-spacing:-.02em}.hero-home .hlead{color:#efe6dd;font-size:clamp(16px,1.7vw,19px);max-width:30em;margin:18px 0 0;line-height:1.5}@media(max-width:600px){.hero-home{height:auto;min-height:78vh}}
+/*HERO FENIX*/.hero-fenix{height:min(90vh,760px);background:#140f0d}.hero-fenix img{object-position:center 30%}.hero-fenix .ov{background:linear-gradient(to top,rgba(18,11,9,.93) 0,rgba(18,11,9,.5) 32%,rgba(18,11,9,.12) 58%,rgba(18,11,9,.4) 100%)}.hero-fenix .col{max-width:900px;text-align:center;padding-bottom:60px}.hero-fenix .eyebrow{color:#f4b58a}.hero-fenix h1{font-size:clamp(33px,5.3vw,58px);max-width:none;margin:10px auto 0;text-shadow:0 2px 40px rgba(0,0,0,.55)}.hero-fenix .hlead{color:#f0e4d8;font-size:clamp(16px,1.7vw,19px);max-width:32em;margin:18px auto 0;line-height:1.55}@media(max-width:600px){.hero-fenix{height:auto;min-height:72vh}.hero-fenix img{object-position:center 20%}.hero-fenix .col{padding-bottom:44px}}
+.herofade{height:84px;background:linear-gradient(to bottom,#140f0d,var(--trust-soft))}
+</style>  <link rel="canonical" href="https://www.fenixbipolar.es/">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "AboutPage",
-      "name": "Quiénes somos — Las personas detrás de fénixbipolar.es",
-      "url": "https://www.fenixbipolar.es/quienes-somos.html",
+      "@type": "WebSite",
+      "name": "fénixbipolar.es",
+      "url": "https://www.fenixbipolar.es/",
       "inLanguage": "es-ES",
       "publisher": {
         "@type": "Organization",
         "name": "fénixbipolar.es",
         "url": "https://www.fenixbipolar.es/",
         "description": "Portal divulgativo sobre el trastorno bipolar, contado desde dentro y revisado por psiquiatría."
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "fénixbipolar.es",
+      "url": "https://www.fenixbipolar.es/",
+      "description": "Portal divulgativo sobre el trastorno bipolar, contado desde dentro y revisado por psiquiatría."
+    },
+    {
+      "@type": "MedicalWebPage",
+      "name": "fénixbipolar.es — Trastorno bipolar, sin filtro y con rigor",
+      "description": "Portal divulgativo de referencia sobre el trastorno bipolar. Contado desde dentro y revisado por psiquiatría. Para quien lo vive y para quien acompaña.",
+      "url": "https://www.fenixbipolar.es/",
+      "inLanguage": "es-ES",
+      "about": {
+        "@type": "MedicalCondition",
+        "name": "Trastorno bipolar",
+        "alternateName": "Trastorno afectivo bipolar"
       },
-      "about": [
-        {
-          "@type": "Person",
-          "name": "Álvaro Liras Torrente",
-          "url": "https://www.fenixbipolar.es/quienes-somos.html",
-          "jobTitle": "Autor y fundador del portal · Redactor publicitario y novelista",
-          "description": "Vive el trastorno bipolar en primera persona desde hace treinta y dos años. Autor del Tríptico del Fénix."
+      "reviewedBy": {
+        "@type": "Person",
+        "name": "Rafael Fernández García-Andrade",
+        "honorificPrefix": "Dr.",
+        "jobTitle": "Médico especialista en Psiquiatría · Doctor en Neurociencias (UCM)",
+        "url": "https://www.rfgandrade.es/",
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": "Hospital Clínico San Carlos",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Madrid",
+            "addressCountry": "ES"
+          }
         },
-        {
-          "@type": "Person",
-          "name": "Rafael Fernández García-Andrade",
-          "honorificPrefix": "Dr.",
-          "url": "https://www.rfgandrade.es/",
-          "jobTitle": "Médico especialista en Psiquiatría · Doctor en Neurociencias (UCM)",
-          "worksFor": {
-            "@type": "MedicalOrganization",
-            "name": "Hospital Clínico San Carlos",
-            "address": {"@type": "PostalAddress","addressLocality": "Madrid","addressCountry": "ES"}
-          },
-          "alumniOf": {"@type": "CollegeOrUniversity","name": "Universidad Complutense de Madrid"}
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidad Complutense de Madrid"
         }
-      ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "fénixbipolar.es",
+        "url": "https://www.fenixbipolar.es/",
+        "description": "Portal divulgativo sobre el trastorno bipolar, contado desde dentro y revisado por psiquiatría."
+      }
     }
   ]
 }
   </script>
 </head><body><header><div class="wrap nav"><a class="logo" href="index.html"><img class="mark" src="assets/marca/YOELFENIX.png" alt="fénixbipolar"><span><b>fénix</b>bipolar</span></a>
-<button class="burger" aria-label="Abrir menú" onclick="document.querySelector('.menu').classList.toggle('open')"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><nav class="menu"><a href="trastorno-bipolar-que-es.html">El trastorno</a><a href="convivir-con-una-persona-bipolar.html">Convivir</a><a href="vivir-con-trastorno-bipolar.html">Vivir con</a><a href="test.html">Test</a><a href="recursos-ayuda-trastorno-bipolar.html">Recursos</a><a href="publicaciones.html">Publicaciones</a><a href="quienes-somos.html">Quiénes somos</a><a class="navblog" href="blog.html">Blog</a></nav></div></header><section class="hero"><img src="assets/img/00-hero-fenix.webp" alt="Las personas detrás de fénixbipolar.es"><div class="ov"><div class="col"><span class="eyebrow">Quiénes somos</span><h1>Dos miradas sobre lo mismo</h1></div></div></section><div class="trust"><div class="col"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" stroke="#2E6E68" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#2E6E68" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Contenido revisado por el <b>Dr. Rafael Fernández García-Andrade</b> · Psiquiatra · H. Clínico San Carlos · UCM</span></div></div><article class="article"><div class="col">
-<p>Este portal lo sostienen dos personas y dos maneras de mirar el trastorno bipolar: la de quien lo vive por dentro, en carne propia, y la de quien lo trata desde fuera. Paciente y psiquiatra. Y, con los años, amigos.</p>
-<p>Ninguna de las dos miradas sobra. Por separado, una es testimonio sin red y la otra, manual sin pulso. Juntas son lo que buscabas cuando llegaste aquí de madrugada: alguien que sabe cómo se siente, y alguien que responde de que lo que se dice es cierto.</p>
-
-<div class="person">
-<div class="ph"><img src="assets/img/02-alvaro.webp" alt="Álvaro Liras Torrente"></div>
-<div class="body"><span class="badge viv">Lo vive por dentro</span>
-<h3>Álvaro Liras Torrente</h3>
-<div class="role">Autor y fundador del portal · Publicista y redactor · Novelista</div>
-<p>Me llamo Álvaro Liras. Soy bipolar. Y no pienso esconderlo.</p>
-<p>Llevo treinta y dos años con el diagnóstico, y he decidido dar la cara —nombre y rostro— porque este es justo el portal que a mí nadie me dio: el que contesta las preguntas que solo sabe responder quien lo ha vivido por dentro. No la teoría; lo que se siente y cómo se sigue adelante.</p>
-<p>Traigo tres cosas que rara vez van juntas. Tres décadas viviendo la enfermedad en todas sus estaciones, arriba y abajo. Un cuarto de siglo de oficio como redactor publicitario —de los que se ganan el pan haciendo que desconocidos lean hasta el final; por eso aquí no vas a encontrar jerga de prospecto—. Y la mirada de un novelista, que ha convertido todo esto en literatura y no en un panfleto.</p>
-<p>No vengo a darte pena ni a venderte una superación heroica. Esto no se cura. Se doma. Y de eso va todo lo que vas a leer aquí.</p>
-<p>Lo que se siente lo he puesto también en ficción: el <a href="https://www.tripticobipolar.es/" target="_blank" rel="noopener">Tríptico Bipolar</a> —<em>Las plumas del Fénix</em>, el desgarro del origen; <em>Paradoja</em>, la huida hacia adelante; y <em>Kala</em>, la redención por la lógica—. Tres novelas en primera persona que son lo más cerca que estarás de una mente bipolar sin vivirla. Con todas las cartas sobre la mesa. Las tienes en <a href="publicaciones.html">Publicaciones</a>.</p>
-</div>
-</div>
-
-<div class="person">
-<div class="ph"><img src="assets/img/01-dr-rafael.webp" alt="Dr. Rafael Fernández García-Andrade"></div>
-<div class="body"><span class="badge med">Pone el rigor</span>
-<h3>Dr. Rafael Fernández García-Andrade</h3>
-<div class="role">Médico especialista en Psiquiatría · Doctor en Neurociencias (UCM, Cum Laude)</div>
-<p>Para que nada de lo que aquí se afirma sobre salud dependa solo de una experiencia personal, el contenido médico del portal lo revisa y lo avala el Dr. Rafael Fernández García-Andrade.</p>
-<p>Desarrolla su actividad clínica en el Hospital Clínico San Carlos de Madrid desde 2010, en un entorno habituado a la psiquiatría más compleja. Coordina el Equipo de Calle de Salud Mental de Madrid —atención a personas sin hogar con trastorno mental grave, un trabajo premiado por el Ayuntamiento de Madrid y la Fundación Caser— y ha sido consultor psiquiátrico en Instituciones Penitenciarias.</p>
-<p>Es Profesor Asociado en la Facultad de Medicina de la Universidad Complutense, donde enseña Psiquiatría y Psiquiatría Forense, y autor de más de quince publicaciones científicas sobre psicosis, trastornos complejos y valoración del riesgo.</p>
-<p>Él pone el rigor donde Álvaro pone lo vivido: repasa lo que se publica, corrige lo que haya que corregir y avala lo que se queda. Cuando en una página lees que algo está «revisado por psiquiatría», es su firma.</p>
-<p>Más sobre su trabajo en <a href="https://www.rfgandrade.es/" target="_blank" rel="noopener">rfgandrade.es</a>.</p>
-</div>
-</div>
-
-<h2>Por qué existe fénixbipolar</h2>
-<p>Nace de una idea sencilla: que nadie que busque entender el trastorno bipolar —recién diagnosticado, o asustado por alguien a quien quiere— se encuentre solo con frialdad de manual o con bulos. Aquí hay información seria, en lenguaje claro, contada desde dentro y revisada por un profesional. Esa es toda la fórmula.</p>
-
-<h2>Cómo trabajamos</h2>
-<ul>
-<li>Escribimos en lenguaje claro, sin tecnicismos vacíos.</li>
-<li>Lo que afirmamos sobre salud se apoya en fuentes fiables y lo revisa un psiquiatra.</li>
-<li>No damos consejo médico personalizado ni sustituimos a un profesional: orientamos.</li>
-<li>En los temas delicados, priorizamos el cuidado del lector por encima de cualquier otra cosa.</li>
-</ul>
-
-<h2>El Fénix</h2>
-<p>El símbolo de este portal es un Fénix: el que arde y renace. No es decoración. Es la idea que sostiene todo lo que vas a leer aquí —que de los peores momentos se puede volver—. Que se puede arder y, aun así, aprender a volar.</p>
-
-<hr />
-<blockquote>
-<p><strong>Aviso.</strong> Este portal tiene una finalidad divulgativa. No sustituye la consulta con un profesional. Si lo estás pasando mal, tienes la <strong>Línea 024</strong> (24 h, gratuita y confidencial). En urgencia, <strong>112</strong>.</p>
-</blockquote>
-<p>¿Te sirve lo que hacemos? <a href="blog.html">Lee el blog</a> o <a href="contacto.html">escríbenos</a> y acompáñanos.</p>
-</div></article><section class="news" id="newsletter"><h2>No te enfrentes a esto a ciegas.</h2><p>Cada semana te escribimos un correo con un artículo nuevo sobre el trastorno bipolar, en lenguaje claro y revisado por un psiquiatra. Para quien lo vive y para quien acompaña.</p><form class="nlform" action="https://formsubmit.co/alvaroliras@gmail.com" method="POST"><input type="hidden" name="_subject" value="Nueva suscripción — newsletter fénixbipolar"><input type="hidden" name="_captcha" value="false"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"><input type="email" name="email" placeholder="Tu correo" required><button class="btn" type="submit">Quiero recibirlo</button><label class="nlconsent"><input type="checkbox" required> Acepto recibir la newsletter. Puedo borrarme cuando quiera.</label></form></section><footer><div class="wrap"><div class="help"><b>¿Estás pasando un momento difícil?</b><br>En España tienes la <b>Línea 024</b> de atención a la conducta suicida: gratuita, confidencial y 24 h. En urgencia, <b>112</b>. No estás solo.</div>
+<button class="burger" aria-label="Abrir menú" onclick="document.querySelector('.menu').classList.toggle('open')"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><nav class="menu"><a href="trastorno-bipolar-que-es.html">El trastorno</a><a href="convivir-con-una-persona-bipolar.html">Convivir</a><a href="vivir-con-trastorno-bipolar.html">Vivir con</a><a href="test.html">Test</a><a href="recursos-ayuda-trastorno-bipolar.html">Recursos</a><a href="publicaciones.html">Publicaciones</a><a href="quienes-somos.html">Quiénes somos</a><a class="navblog" href="blog.html">Blog</a></nav></div></header><section class="hero hero-fenix"><img src="assets/img/00-hero-fenix.webp" alt="El Fénix con las alas de fuego desplegadas sobre una ciudad en ruinas"><div class="ov"><div class="col"><span class="eyebrow" style="color:#ffd9cc">Trastorno bipolar · sin filtro y con rigor</span><h1>Si has llegado aquí a las cuatro de la mañana, este sitio es para ti.</h1><p class="hlead">Información seria sobre el trastorno bipolar, contada desde dentro y revisada por psiquiatría.</p></div></div></section><div class="herofade" aria-hidden="true"></div><div class="trust"><div class="col"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" stroke="#2E6E68" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#2E6E68" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Contenido revisado por el <b>Dr. Rafael Fernández García-Andrade</b> · Psiquiatra · H. Clínico San Carlos · UCM</span></div></div>
+<section style="padding:54px 0"><div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+<a class="card" href="vivir-con-trastorno-bipolar.html" style="border:1px solid var(--line);border-top:4px solid var(--ember);border-radius:16px;overflow:hidden;background:#fff;color:var(--ink)"><img src="assets/img/04-home-paciente.webp" style="width:100%;height:210px;object-fit:cover;object-position:center 22%" alt="Lo vivo yo"><div style="padding:22px"><h2 style="font-size:23px;margin-bottom:6px">Lo vivo yo</h2><p style="color:var(--ink-soft);font-size:15px">Entender qué te pasa y cómo seguir adelante con una vida tuya.</p></div></a>
+<a class="card" href="convivir-con-una-persona-bipolar.html" style="border:1px solid var(--line);border-top:4px solid var(--trust);border-radius:16px;overflow:hidden;background:#fff;color:var(--ink)"><img src="assets/img/05-home-familia.webp" style="width:100%;height:210px;object-fit:cover;object-position:center 22%" alt="Acompaño a alguien"><div style="padding:22px"><h2 style="font-size:23px;margin-bottom:6px">Acompaño a alguien</h2><p style="color:var(--ink-soft);font-size:15px">Cómo ayudar de verdad, qué decir y qué no, y cómo cuidarte tú.</p></div></a>
+</div></section>
+<section style="padding:10px 0 40px"><div class="wrap"><div style="margin-bottom:26px"><h2 style="font-size:32px">Entender el trastorno bipolar</h2><p style="color:var(--ink-soft);font-size:16px;margin-top:6px;max-width:46em">Lo esencial, bien explicado y revisado. Empieza por donde más te apriete.</p></div><div class="topgrid"><a class="tile" href="trastorno-bipolar-que-es.html" style="background:var(--bone-2);border-radius:14px;padding:20px 18px;color:var(--ink)"><span class="ti"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16"/><circle cx="12" cy="8" r="0.6" fill="currentColor" stroke="none"/></svg></span><h3>Qué es</h3><p>La definición, sin tecnicismos.</p></a><a class="tile" href="sintomas-trastorno-bipolar.html" style="background:var(--bone-2);border-radius:14px;padding:20px 18px;color:var(--ink)"><span class="ti"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span><h3>Síntomas</h3><p>Las señales de las fases alta y baja.</p></a><a class="tile" href="tipos-trastorno-bipolar.html" style="background:var(--bone-2);border-radius:14px;padding:20px 18px;color:var(--ink)"><span class="ti"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></span><h3>Tipos</h3><p>Bipolar I, II y otras formas.</p></a><a class="tile" href="diagnostico-trastorno-bipolar.html" style="background:var(--bone-2);border-radius:14px;padding:20px 18px;color:var(--ink)"><span class="ti"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="16" rx="2"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Diagnóstico</h3><p>Cómo y quién lo confirma.</p></a><a class="tile" href="tratamiento-trastorno-bipolar.html" style="background:var(--bone-2);border-radius:14px;padding:20px 18px;color:var(--ink)"><span class="ti"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 5.5l8 8a4 4 0 0 1-5.7 5.7l-8-8a4 4 0 0 1 5.7-5.7z"/><line x1="8" y1="11" x2="14" y2="17"/></svg></span><h3>Tratamiento</h3><p>Fármacos, terapia y hábitos.</p></a><a class="tile" href="fases-trastorno-bipolar.html" style="background:var(--bone-2);border-radius:14px;padding:20px 18px;color:var(--ink)"><span class="ti"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/></svg></span><h3>Fases</h3><p>Manía, depresión y estabilidad.</p></a><a class="tile" href="causas-trastorno-bipolar.html" style="background:var(--bone-2);border-radius:14px;padding:20px 18px;color:var(--ink)"><span class="ti"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V10"/><path d="M12 10C9 10 7 8 7 5c3 0 5 2 5 5z"/><path d="M12 12c3 0 5-2 5-5-3 0-5 2-5 5z"/></svg></span><h3>Causas</h3><p>Qué influye en que aparezca.</p></a><a class="tile" href="test.html" style="background:var(--bone-2);border-radius:14px;padding:20px 18px;color:var(--ink)"><span class="ti"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="1.75" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></span><h3>Test</h3><p>¿Conviene consultar? Oriéntate.</p></a></div></div></section><section style="padding:18px 0 46px"><div class="wrap"><div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;margin-bottom:26px"><div><span class="eyebrow">Del blog</span><h2 style="font-size:32px">Lo último que hemos escrito</h2></div><a class="btn" href="blog.html">Ver todo el blog →</a></div><div class="bloghome" style="display:grid;gap:22px"><a class="card" href="blog-episodio-maniaco.html" style="display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;color:var(--ink)"><img src="assets/img/16-episodio-maniaco.webp" alt="Episodio maníaco: qué es y cómo reconocerlo" style="width:100%;height:170px;object-fit:cover;object-position:center 30%"><div style="padding:18px 20px 20px;display:flex;flex-direction:column;flex:1"><h3 style="font-size:18px;margin:0 0 7px;font-family:'Fraunces',serif;font-weight:600;line-height:1.2">Episodio maníaco: qué es y cómo reconocerlo</h3><p style="color:var(--ink-soft);font-size:14px;margin:0 0 12px">Qué es un episodio maníaco, cómo reconocer sus señales, en qué se diferencia de la hipomanía y cuándo deja de…</p><span style="color:var(--ember);font-weight:600;font-size:14px;margin-top:auto">Leer →</span></div></a><a class="card" href="blog-pareja-bipolar.html" style="display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;color:var(--ink)"><img src="assets/img/19-pareja.webp" alt="Tener una pareja bipolar" style="width:100%;height:170px;object-fit:cover;object-position:center 30%"><div style="padding:18px 20px 20px;display:flex;flex-direction:column;flex:1"><h3 style="font-size:18px;margin:0 0 7px;font-family:'Fraunces',serif;font-weight:600;line-height:1.2">Tener una pareja bipolar</h3><p style="color:var(--ink-soft);font-size:14px;margin:0 0 12px">Cómo es tener una pareja con trastorno bipolar: querer sin perderte, atravesar las fases juntos, poner…</p><span style="color:var(--ember);font-weight:600;font-size:14px;margin-top:auto">Leer →</span></div></a><a class="card" href="blog-mitos-trastorno-bipolar.html" style="display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;color:var(--ink)"><img src="assets/img/24-mitos.webp" alt="Mitos sobre el trastorno bipolar" style="width:100%;height:170px;object-fit:cover;object-position:center 30%"><div style="padding:18px 20px 20px;display:flex;flex-direction:column;flex:1"><h3 style="font-size:18px;margin:0 0 7px;font-family:'Fraunces',serif;font-weight:600;line-height:1.2">Mitos sobre el trastorno bipolar</h3><p style="color:var(--ink-soft);font-size:14px;margin:0 0 12px">Los mitos más extendidos sobre el trastorno bipolar y la realidad detrás de cada uno. Desmontar el estigma…</p><span style="color:var(--ember);font-weight:600;font-size:14px;margin-top:auto">Leer →</span></div></a></div></div></section><section style="padding:6px 0 50px"><div class="wrap"><div class="tribanner" style="position:relative;overflow:hidden;display:grid;grid-template-columns:1.05fr 1fr;gap:28px;align-items:center;background:linear-gradient(135deg,#FFFDF9,#F4ECE2);border:1px solid var(--line);border-radius:22px;padding:28px 34px"><div class="tbimg"><img src="assets/libros/triptico.webp" alt="Tríptico del Fénix: Las Plumas del Fénix, Paradoja y Kala" style="width:100%;height:auto;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;justify-content:center"><img src="assets/marca/YOELFENIX.png" alt="" style="width:130px"></div></div><div><span class="eyebrow">La novela de la casa</span><h2 style="font-size:clamp(26px,3.4vw,34px);margin:6px 0 10px">Tríptico del Fénix</h2><p style="color:var(--ink-soft);max-width:36em;font-size:16px">Tres novelas en primera persona —<em>Las Plumas del Fénix</em>, <em>Paradoja</em> y <em>Kala</em>—. Cada una se lee sola; juntas, son lo más cerca que estarás de una mente bipolar sin vivirla.</p><a class="btn" style="margin-top:16px" href="https://www.tripticobipolar.es" target="_blank" rel="nofollow sponsored noopener">Descúbrelo en tripticobipolar.es →</a></div></div></div></section><section style="padding:8px 0 40px"><div class="wrap"><div class="aval" style="display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;background:var(--trust-soft);border:1px solid #cfe3df;border-radius:18px;padding:24px 28px"><img src="assets/img/01-dr-rafael.webp" alt="Dr. Rafael Fernández García-Andrade" style="width:104px;height:104px;border-radius:50%;object-fit:cover;object-position:center 18%"><div><span class="eyebrow" style="color:var(--trust)">Quién revisa esto</span><h3 style="font-size:23px;margin:4px 0 6px">Dr. Rafael Fernández García-Andrade</h3><p style="color:#1f5450;font-size:15px;margin:0">Psiquiatra · Hospital Clínico San Carlos · Universidad Complutense de Madrid. Revisa y avala los contenidos del portal para que lo que leas sea riguroso, además de cercano.</p></div></div></div></section><section class="news" id="newsletter"><h2>No te enfrentes a esto a ciegas.</h2><p>Cada semana te escribimos un correo con un artículo nuevo sobre el trastorno bipolar, en lenguaje claro y revisado por un psiquiatra. Para quien lo vive y para quien acompaña.</p><form class="nlform" action="https://formsubmit.co/alvaroliras@gmail.com" method="POST"><input type="hidden" name="_subject" value="Nueva suscripción — newsletter fénixbipolar"><input type="hidden" name="_captcha" value="false"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"><input type="email" name="email" placeholder="Tu correo" required><button class="btn" type="submit">Quiero recibirlo</button><label class="nlconsent"><input type="checkbox" required> Acepto recibir la newsletter. Puedo borrarme cuando quiera.</label></form></section><footer><div class="wrap"><div class="help"><b>¿Estás pasando un momento difícil?</b><br>En España tienes la <b>Línea 024</b> de atención a la conducta suicida: gratuita, confidencial y 24 h. En urgencia, <b>112</b>. No estás solo.</div>
 <div class="fnav"><a href="trastorno-bipolar-que-es.html">Qué es</a><a href="sintomas-trastorno-bipolar.html">Síntomas</a><a href="tratamiento-trastorno-bipolar.html">Tratamiento</a><a href="convivir-con-una-persona-bipolar.html">Convivir</a><a href="vivir-con-trastorno-bipolar.html">Vivir con</a><a href="test.html">Test</a><a href="recursos-ayuda-trastorno-bipolar.html">Recursos</a><a href="publicaciones.html">Publicaciones</a><a href="quienes-somos.html">Quiénes somos</a><a href="sobre-el-portal.html">Sobre el portal</a><a href="contacto.html">Contacto</a></div>
 <div style="text-align:center;margin:24px 0 6px"><img src="assets/marca/INFINITO-INTERROGACION-blanco.png" alt="" width="72" style="height:auto;opacity:.5"></div>
 <div class="fbot">© 2026 fénixbipolar.es — Una producción de El Gordo y el Flaco.</div></div></footer><script>/*FX*/(function(){
