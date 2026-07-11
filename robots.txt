@@ -1,9 +1,4 @@
-# MAQUETA — bloqueado mientras esté pendiente el aval del Dr.
-# AL LANZAR: borra las dos líneas Disallow de abajo y quita los <meta name="robots" content="noindex"> de las páginas.
 User-agent: *
-Disallow: /
+Allow: /
 
-# Para el lanzamiento, deja solo esto:
-# User-agent: *
-# Allow: /
-Sitemap: https://www.fenixbipolar.es/sitemap.xml
+Sitemap: https://fenixbipolar.es/sitemap.xml
