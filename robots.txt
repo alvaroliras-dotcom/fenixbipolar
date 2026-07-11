@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fenixbipolar.es/sitemap.xml
+Sitemap: https://www.fenixbipolar.es/sitemap.xml
