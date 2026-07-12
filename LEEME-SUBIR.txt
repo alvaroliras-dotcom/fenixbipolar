@@ -1,0 +1,10 @@
+SUBIR A GITHUB — 16 posts nuevos (fénixbipolar.es)
+==================================================
+Arrastra a GitHub (Add file -> Upload files) los 4 elementos de ESTA carpeta:
+  assets\   posts\   blog.html   sitemap.xml
+IMPORTANTE: arrástralos desde esta carpeta ya descomprimida (NO desde dentro del zip),
+para que los nombres largos NO se acorten.
+- posts\ : los 16 posts (7 anteriores + 9 nuevos).
+- assets\img\ : solo las 9 fotos nuevas (08-16). Las 7 anteriores ya reutilizan imágenes del repo.
+- blog.html y sitemap.xml : sobrescriben los actuales (49 artículos, 16 enlazados).
+Commit directamente a main. Vercel despliega en 1-2 min.
