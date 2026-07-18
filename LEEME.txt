@@ -1,0 +1,31 @@
+SUBIDA A GITHUB — repo alvaroliras-dotcom/fenixbipolar (rama main)
+=================================================================
+
+Son DOS subidas separadas. Descomprime este ZIP y sube cada cosa a su sitio.
+
+1) blog.html  ->  A LA RAIZ del repo
+   GitHub: Add file > Upload files  (estando en la raiz)
+   Arrastra blog.html. Te avisara de que reemplaza el existente: correcto.
+   QUE ARREGLA: el buscador. Ahora al filtrar Bipolar I salen 71 posts
+   (antes 1-2), Bipolar II 72, Ciclotimia 65, Mania 75, Depresion 70.
+   Y quien filtra Bipolar II NO ve lo que es solo de Bipolar I.
+
+2) Los 11 archivos .webp  ->  A LA CARPETA assets/img
+   GitHub: entra en assets/img > Add file > Upload files
+   Arrastra los 11 archivos de la carpeta assets/img de este ZIP.
+   (37 a 47 - trastorno-bipolar.webp)
+   QUE ARREGLA: los 11 posts que salian SIN FOTO
+   (antipsicoticos, lamotrigina, antidepresivos-viraje, dejar-medicacion,
+    psicoeducacion, sueno, plan-de-crisis, alcohol, cannabis, embarazo,
+    contar-el-diagnostico).
+
+DESPUES
+-------
+Vercel redespliega solo en ~1 minuto.
+Si no ves los cambios en tu navegador: Ctrl+Shift+R (o ventana de incognito),
+que es cache tuya, no del servidor.
+
+COMPROBACION RAPIDA
+-------------------
+- Entra en /blog.html, pulsa el filtro "Bipolar I": deben salir muchos, no uno.
+- Baja hasta los posts de medicacion: deben verse con foto.
