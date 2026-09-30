@@ -1,5 +1,0 @@
-# fénixbipolar.es
-User-agent: *
-Allow: /
-
-Sitemap: https://fenixbipolar.es/sitemap.xml
