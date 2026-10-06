@@ -1,7 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": false,
+  "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/index",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -28,13 +35,6 @@
           "value": "SAMEORIGIN"
         }
       ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/posts/:slug",
-      "destination": "/:slug",
-      "permanent": true
     }
   ]
 }
