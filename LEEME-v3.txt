@@ -1,0 +1,13 @@
+FÉNIX BIPOLAR · v3 (6 de octubre de 2026). Sustituye al zip anterior de Fénix.
+
+Cambios (todos los de la v2 más estos):
+1. Los 36 títulos largos y las 14 descripciones largas, reescritos.
+2. Migas de pan visibles y con schema (BreadcrumbList) en 94 páginas.
+3. «Sigue leyendo» (3 lecturas del mismo tema) en los 80 artículos.
+4. Bloque «El libro de la casa» con las portadas, en 48 páginas.
+5. Quitado el «CTA:» suelto en 23 artículos.
+6. Imágenes con carga diferida salvo la primera de cada página.
+7. Test: título y H1 con «test de bipolaridad». Hipomanía: H1 alineado con el título.
+
+Cómo subirlo: descomprime y arrastra TODO a la raíz del repositorio (se sobreescribe). Vercel despliega solo.
+Después: Search Console (fenixbipolar.es) → reenviar el sitemap.
