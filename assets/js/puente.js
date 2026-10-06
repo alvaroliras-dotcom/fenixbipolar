@@ -1,0 +1,1 @@
+(function(){document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="tripticobipolar.es"]');if(!a)return;try{if(typeof gtag==='function')gtag('event','clic_triptico',{pagina:location.pathname,destino:a.getAttribute('href').split('?')[0]});}catch(x){}},true);})();
